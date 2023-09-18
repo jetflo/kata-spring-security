@@ -1,5 +1,25 @@
+application:
+  client-origin-url: http://localhost:4040
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+  port: 8080
+
 spring:
-  security:
-    user:
-      name: admin
-      password: admin
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+
+okta:
+  oauth2:
+    issuer: https://dev-q3bf0w2vqndcreso.us.auth0.com/
+    audience: https://kata-security-at-kiabi.com
+
+
+# Admin User:
+# Login admin@kata-kiabi.fr
+# Mdp : adminkata0!
